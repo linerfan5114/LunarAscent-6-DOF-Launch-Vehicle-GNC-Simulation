@@ -1,2 +1,21 @@
-# LunarAscent-6-DOF-Launch-Vehicle-GNC-Simulation
-6-DOF launch vehicle simulation from liftoff to lunar transfer. Models gravity turn, staged propulsion, aerodynamic loads, and 3-axis gimbal control. Calculates optimal ascent trajectory and trans-lunar injection burn. Built in C++ with Python visualization pipeline.
+LunarAscent/
+├── src/
+│   ├── vehicle.cpp              ← مدل موشک (جرم، آیرودینامیک، مرکز ثقل)
+│   ├── propulsion.cpp          ← مدل موتور (تراست، Isp، gimbal)
+│   ├── environment.cpp         ← مدل محیط (جو، گرانش، باد)
+│   ├── guidance.cpp            ← قانون هدایت (میخواهیم کجا بریم)
+│   ├── navigation.cpp          ← ناوبری (الان کجاییم)
+│   ├── control.cpp             ← کنترل (موتور رو کج کنیم)
+│   └── main.cpp                ← شبیه‌ساز اصلی
+├── include/
+│   ├── vehicle.hpp
+│   ├── propulsion.hpp
+│   ├── environment.hpp
+│   ├── guidance.hpp
+│   ├── navigation.hpp
+│   └── control.hpp
+├── sim/
+│   └── plot_trajectory.py
+├── Makefile
+├── README.md
+└── LICENSE
